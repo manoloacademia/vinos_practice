@@ -5,12 +5,21 @@ class Wine(models.Model):
     brand = models.CharField(max_length=50)
     price = models.FloatField()
     aged = models.IntegerField()
-    cellar = models.CharField(max_length=50)
+    winery = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 class Winery(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 class Brand(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
+
+    def __str__(self):
+        return self.name
