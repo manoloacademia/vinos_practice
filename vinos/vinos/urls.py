@@ -20,4 +20,5 @@ from base import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
+    path('lista-vinos/', views.wine_list, name="wine_list"),
 ]
