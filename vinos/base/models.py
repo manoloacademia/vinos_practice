@@ -7,7 +7,7 @@ class Wine(models.Model):
     aged = models.IntegerField()
     cellar = models.CharField(max_length=50)
 
-class Cellar(models.Model):
+class Winery(models.Model):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=100)
 
