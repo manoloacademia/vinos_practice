@@ -1,3 +1,3 @@
 from django.contrib import admin
 
-# Register your models here.
+# Superuser created manoloacademia: 1234*5678
