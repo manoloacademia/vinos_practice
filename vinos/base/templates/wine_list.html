@@ -2,6 +2,12 @@
 
 {% block content %}
 <h3>Lista de vinos</h3>
-
-
+    {% for wine in wine_list %}
+        <p>Nombre: {{ wine.name }}</p>
+        <p>Tipo: {{ wine.brand }}</p>
+        <p>Precio: U$D {{ wine.price }}</p>
+        <p>Año: {{ wine.aged }}</p>
+        <p>Bodega: {{ wine.winery }}</p>
+        <hr>
+    {% endfor %}
 {% endblock %}
