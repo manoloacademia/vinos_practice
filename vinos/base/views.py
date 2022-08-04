@@ -35,3 +35,8 @@ def brand_detail(request):
     brand_list = Brand.objects.all()
     context = {"brand_list": brand_list}
     return render(request, 'brand_detail.html', context=context)
+
+def winery(request):
+    wineries = Winery.objects.all()
+    context = {"wineries": wineries}
+    return render(request, 'winery.html', context=context)

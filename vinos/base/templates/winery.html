@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h3>Bodegas</h3>
+    <hr>
+    {% for winery in wineries %}
+        <h4>{{ winery.name }}</h4>
+        <p>Ubicación: {{ winery.location }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}
