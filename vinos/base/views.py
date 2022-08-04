@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from matplotlib.style import context
 from .models import Wine, Winery, Brand
 from .forms import WineForm
 
@@ -24,3 +25,7 @@ def create_wine(request):
                 aged = form.cleaned_data['aged'],
                 winery = form.cleaned_data['winery'])
             return redirect(wine_list)
+    elif request.method == 'GET':
+        form = WineForm()
+        context = {'form': form}
+        return render(request, 'create_wine.html', context=context)
