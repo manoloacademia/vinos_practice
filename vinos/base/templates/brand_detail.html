@@ -1,0 +1,12 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h3>Detalle de los brands</h3>
+    <hr>
+    {% for brand in brand_list %}
+        <h4>{{ brand.name }}</h4>
+        <p>{{ brand.description }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}

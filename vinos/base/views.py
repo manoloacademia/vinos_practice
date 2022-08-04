@@ -25,7 +25,13 @@ def create_wine(request):
                 aged = form.cleaned_data['aged'],
                 winery = form.cleaned_data['winery'])
             return redirect(wine_list)
+    
     elif request.method == 'GET':
         form = WineForm()
         context = {'form': form}
         return render(request, 'create_wine.html', context=context)
+
+def brand_detail(request):
+    brand_list = Brand.objects.all()
+    context = {"brand_list": brand_list}
+    return render(request, 'brand_detail.html', context=context)
