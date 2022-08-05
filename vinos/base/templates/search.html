@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+    {% for wine in wines %}
+    <div class="card" style="width: 18rem;">
+        <img src="https://th.bing.com/th/id/R.37bc3ffce278fa0b4908998b49b5477c?rik=GqeueVREaoksyQ&pid=ImgRaw&r=0" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{wine.name}}</h5>
+            <p class="card-text">Precio: {{wine.price}}</p>
+            <p class="card-text">Winery: {{wine.winery}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

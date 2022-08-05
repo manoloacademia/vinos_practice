@@ -1,5 +1,4 @@
 from django.shortcuts import redirect, render
-from matplotlib.style import context
 from .models import Wine, Winery, Brand
 from .forms import WineForm
 
@@ -40,3 +39,9 @@ def winery(request):
     wineries = Winery.objects.all()
     context = {"wineries": wineries}
     return render(request, 'winery.html', context=context)
+
+def search_products(request):
+    search = request.GET['search']
+    wines = Wine.objects.filter(name__icontains=search)  #Trae los que cumplan la condicion
+    context = {'wines':wines}
+    return render(request, 'search.html', context=context)

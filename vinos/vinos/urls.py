@@ -8,5 +8,6 @@ urlpatterns = [
     path('lista-vinos/', views.wine_list, name="wine_list"),
     path('crear-vinos/', views.create_wine, name="create_wine"),
     path('tipos/', views.brand_detail, name="brand_detail"),
-    path('bodegas/', views.winery, name="winery")
+    path('bodegas/', views.winery, name="winery"),
+    path('search/', views.search_products, name="search")
 ]
